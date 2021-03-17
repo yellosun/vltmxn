@@ -5,14 +5,27 @@ import Body from './Body'
 export default function Home() {
   return (
     <div style={container}>
-        <Nav />
-        <Body />
+        <div style={content}>
+            <Nav />
+            <Body />
+        </div>
     </div>
   );
 }
 
 const container = {
-    height: '100vh',
-    backgroundColor: 'red'
+    backgroundColor: 'red',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100vh'
     // fontFamily: `'Roboto', 'Oxygen', 'Helvetica Neue',`,
+}
+
+const content = {
+    height: '600px',
+    width: '1100px',
+    display: 'flex',
+    align: 'center',
+    backgroundColor: 'white'
 }
