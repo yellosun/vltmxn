@@ -10,10 +10,10 @@ export default function About() {
 }
 
 const container = {
-    margin: 0,
+    
 }
 
 const image = {
 	height: '100%',
-	width: '500px'
+	width: '400px',
 }

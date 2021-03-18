@@ -3,11 +3,15 @@ import React from 'react';
 export default function Nav() {
   return (
     <div style={container}>
+    hi
     </div>
   );
 }
 
 const container = {
-    margin: 0,
-    // fontFamily: `'Roboto', 'Oxygen', 'Helvetica Neue',`,
+    height: '100%',
+    width: '300px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
 }
