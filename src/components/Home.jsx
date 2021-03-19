@@ -1,25 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Nav from './Nav'
 import Body from './Body'
 
+export const Context = React.createContext({})
+export const routes = {
+    ABOUT: 'About',
+    PROJECTS:'Projects',
+    WORK:'Work',
+    CONTACT:'Contact'
+}
+
 export default function Home() {
-  return (
-    <div style={container}>
-        <div style={content}>
-            <Nav />
-            <Body />
-        </div>
-    </div>
-  );
+    const [selectedRoute, changeRoute] = useState(routes.ABOUT)
+
+    return (
+        <Context.Provider value={{selectedRoute, changeRoute}}>
+            <div style={container}>
+                <div style={content}>
+                    <Nav />
+                    <Body />
+                </div>
+            </div>
+        </Context.Provider>
+    );
 }
 
 const container = {
-    backgroundColor: 'red',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '100vh'
-    // fontFamily: `'Roboto', 'Oxygen', 'Helvetica Neue',`,
+    height: '100vh',
+
+    // backgroundColor: 'red',
+    fontFamily: 'Roboto',
+    fontWeight: 500,
+    fontSize: 13
 }
 
 const content = {
