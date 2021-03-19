@@ -7,7 +7,8 @@ export const routes = {
     ABOUT: 'About',
     PROJECTS:'Projects',
     WORK:'Work',
-    CONTACT:'Contact'
+    CONTACT:'Contact',
+    RESOURCES: 'Resources'
 }
 
 export default function Home() {
@@ -32,7 +33,7 @@ const container = {
     height: '100vh',
 
     // backgroundColor: 'red',  
-    fontFamily: 'Roboto',
+    fontFamily: 'Lora',
     fontWeight: 500,
     fontSize: 13
 }
