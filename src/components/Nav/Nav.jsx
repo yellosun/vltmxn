@@ -1,5 +1,11 @@
 import React, { useContext } from 'react';
 import { Context, routes } from '../Home'
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link,
+} from "react-router-dom";
 
 export function Routes() {
     const { selectedRoute, changeRoute } = useContext(Context)
@@ -13,10 +19,10 @@ export function Routes() {
 
         return (
             <div key={route} style={routeContainer} onClick={() => onClick(route)}>
-                <div>
+                <Link to={route.toLowerCase()} style={link}>
                     {route}
                     <span style={isSelected ? selectedCircle : unSelectedCircle}></span>
-                </div>
+                </Link>
             </div>  
         )
     })
@@ -29,7 +35,9 @@ export default function Nav() {
                 V.M.
             </div>*/}
             <div style={routesContainer}>
-                <Routes/>
+                <BrowserRouter>
+                    <Routes/>
+                </BrowserRouter>
             </div>
         </div>
     );
@@ -58,6 +66,11 @@ const logo = {
     height: 40,
     width: 40,
     fontWeight: 700,
+}
+
+const link = {
+    textDecoration: 'none',
+    color: 'inherit'
 }
 
 const routesContainer = {
