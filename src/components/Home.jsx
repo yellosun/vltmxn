@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter } from "react-router-dom";
 import Nav from './Nav'
 import Body from './Body'
 
@@ -18,8 +19,10 @@ export default function Home() {
         <Context.Provider value={{selectedRoute, changeRoute}}>
             <div style={container}>
                 <div style={content}>
-                    <Nav />
-                    <Body />
+                    <BrowserRouter>
+                        <Nav />
+                        <Body />
+                    </BrowserRouter>
                 </div>
             </div>
         </Context.Provider>
@@ -34,7 +37,7 @@ const container = {
 
     // backgroundColor: 'red',  
     fontFamily: 'Lora',
-    fontWeight: 500,
+    fontWeight: 700,
     fontSize: 13
 }
 

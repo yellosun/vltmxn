@@ -1,11 +1,6 @@
 import React, { useContext } from 'react';
 import { Context, routes } from '../Home'
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Link,
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export function Routes() {
     const { selectedRoute, changeRoute } = useContext(Context)
@@ -16,13 +11,14 @@ export function Routes() {
 
     return Object.values(routes).map((route) => {
         const isSelected = route === selectedRoute
-
+        const linkTo = route === routes.ABOUT ? '/' : '/' + route.toLowerCase()
+        
         return (
             <div key={route} style={routeContainer} onClick={() => onClick(route)}>
-                <Link to={route.toLowerCase()} style={link}>
+                <Link to={linkTo} style={{...link, fontWeight: isSelected && 300}}>
                     {route}
-                    <span style={isSelected ? selectedCircle : unSelectedCircle}></span>
                 </Link>
+                {/*<div style={isSelected ? selectedCircle : unSelectedCircle}></div>*/}
             </div>  
         )
     })
@@ -35,9 +31,7 @@ export default function Nav() {
                 V.M.
             </div>*/}
             <div style={routesContainer}>
-                <BrowserRouter>
-                    <Routes/>
-                </BrowserRouter>
+                <Routes/>
             </div>
         </div>
     );
@@ -79,7 +73,10 @@ const routesContainer = {
 
 const routeContainer = {
     display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
     alignItems: 'center',
+    width: '100%',
     marginTop: 20,
     cursor: 'pointer',
 }

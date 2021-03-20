@@ -1,10 +1,20 @@
 import React from 'react';
 import About from './About'
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link,
+} from "react-router-dom";
 
 export default function Body() {
   return (
     <div style={container}>
-    	<About />
+        <Switch>
+            <Route path='/'>
+            	<About />
+            </Route>
+        </Switch>
     </div>
   );
 }

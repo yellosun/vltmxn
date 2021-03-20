@@ -28,11 +28,10 @@ export default function About() {
 					<img src={Bio} style={blurbImg}/>
 				}
 				<div style={btnGroup}>
-					
-					{/*<div style={isText ? btn : selectedBtn} onClick={onClickImg} />
-					<div style={isText ? selectedBtn : btn} onClick={onClickText} />*/}
-					<div style={{marginRight: 5, textDecoration: !isText && 'underline'}} onClick={onClickImg}>written</div>
-					<div style={{textDecoration: isText && 'underline'}} onClick={onClickText}>typed</div>
+					<div style={isText ? btn : selectedBtn} onClick={onClickImg} />
+					<div style={isText ? selectedBtn : btn} onClick={onClickText} />
+					{/*<div style={{marginRight: 5, textDecoration: !isText && 'underline'}} onClick={onClickImg}>written</div>
+					<div style={{textDecoration: isText && 'underline'}} onClick={onClickText}>typed</div>*/}
 					
 				</div>
 			</div>
@@ -55,28 +54,31 @@ const btnGroup = {
 }
 
 const btn = {
-	height: .5,
-	width: 20,
+	height: 10,
+	width: 10,
 	marginRight: 5,
 	borderRadius: '100%',
 	cursor: 'pointer',
+	// backgroundColor: 'rgba(0,0,0,.14)',
 	border: '1px solid rgba(0,0,0,.14)',
 }
 
 const selectedBtn = {
 	...btn,
 	border: '1px solid black',
+	backgroundColor: 'black'
 }
 
 const bioContainer = {
 	display: 'flex',
     flexDirection: 'column',
-    alignContent: 'space-between'
+    justifyContent: 'space-between',
+    height: 250
 }
 
 const blurbImg = {
-	width: 400,
-	height: 250
+	width: 350,
+	height: 'auto'
 }
 
 const portImg = {
@@ -88,12 +90,13 @@ const portImg = {
 
 const title = {
 	fontWeight: 700,
-	fontSize: 20
+	fontSize: 20,
+	marginBottom: 10
 }
 
 const textBlurb = {
 	...blurbImg,
-	lineHeight: 2,
+	lineHeight: 1.7,
 	fontWeight: 300
 }
 
