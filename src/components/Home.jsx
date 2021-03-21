@@ -46,5 +46,5 @@ const content = {
     width: '1100px',
     display: 'flex',
     align: 'center',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
 }

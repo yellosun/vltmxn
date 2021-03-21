@@ -1,17 +1,20 @@
 import React from 'react';
 import { projects } from './constants'
-import './projects.css'
 
 export function Card({ name, description, img, stack, actions}) {
     return (
-        <div style={card}>
-            <img src={img} className={'image'}/>
-            <div>{name}</div>
-            <div style={desc}>{description}</div>
-            <div style={s}>Stack: {stack}</div>
-        </div>
+        <React.Fragment>
+            <div style={card}>
+                <img src={img} style={demoImg} onClick={null}/>
+                <div>{name}</div>
+                <div style={desc}>{description}</div>
+                <div style={s}>Stack: {stack}</div>
+            </div>
 
-        <div></div>
+            <div>
+                <img src={img} style={expandedImg}/>
+            </div>
+        </React.Fragment>
     )
 }
 
@@ -37,14 +40,14 @@ const card = {
     padding: 20    
 }
 
-const image = {
+const demoImg = {
     width: 200,
     cursor: 'pointer',
     transition: 'all ease .5s',
+}
 
-    '&:hover': {
-        transform: 'scale(1.5)',
-    }
+const expandedImg = {
+    width: 600,
 }
 
 const desc = {
