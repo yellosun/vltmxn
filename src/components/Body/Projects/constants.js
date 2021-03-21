@@ -7,7 +7,7 @@ const grid = require('../../../assets/grid.jpg')
 export const projects = {
     CEQ: {
         name: 'CryptoEQ',
-        description: 'Built desktop and mobile frontend, admin management platform, and telegram bot.',
+        description: 'Built crypto sentiment analysis desktop and mobile frontend, admin management platform, and telegram bot.',
         img: ceq,
         stack: 'React, Redux, JavaScript',
         actions: {
@@ -27,7 +27,7 @@ export const projects = {
     },
     GRID: {
         name: 'Grid Designer',
-        description: 'Built customizable and adjustable grid to design and download block patterns.',
+        description: 'Built customizable and adjustable grid to design and download block patterns with palette selector.',
         img: grid,
         stack: 'React, Hooks, Context, JavaScript',
         actions: {
@@ -47,7 +47,7 @@ export const projects = {
     },
     BOBA: {
         name: 'BobaMe',
-        description: 'Designed and prototyped a San Francisco boba tea mobile sign up, ordering, and checkout.',
+        description: 'Designed and prototyped San Francisco boba tea mobile sign up, login, ordering, and checkout.',
         img: boba,
         stack: 'Figma, Photoshop',
         actions: {
