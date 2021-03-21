@@ -1,16 +1,15 @@
 import React from 'react';
 import About from './About'
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Link,
-} from "react-router-dom";
+import Projects from './Projects'
+import { Switch, Route } from "react-router-dom";
 
 export default function Body() {
   return (
     <div style={container}>
         <Switch>
+            <Route path='/projects'>
+                <Projects />
+            </Route>
             <Route path='/'>
             	<About />
             </Route>

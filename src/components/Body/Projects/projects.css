@@ -1,0 +1,10 @@
+img {
+    width: 100%;
+    cursor: 'pointer';
+    transition: 'all ease .5s';
+}
+
+img:hover {
+    transform: scale(2);
+    border-radius: 2%;
+}

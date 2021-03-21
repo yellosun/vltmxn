@@ -59,7 +59,6 @@ const btn = {
 	marginRight: 5,
 	borderRadius: '100%',
 	cursor: 'pointer',
-	// backgroundColor: 'rgba(0,0,0,.14)',
 	border: '1px solid rgba(0,0,0,.14)',
 }
 
@@ -85,7 +84,6 @@ const portImg = {
 	width: 200,
 	height: 'auto',
 	marginRight: 40,
-	borderRadius: '10%'
 }
 
 const title = {
