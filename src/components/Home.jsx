@@ -38,4 +38,5 @@ const content = {
     display: 'flex',
     align: 'center',
     backgroundColor: 'white',
+    transition: 'all ease .5s',
 }

@@ -1,13 +1,38 @@
 import React, { useState, useCallback } from 'react';
 import { projects } from './constants'
 
+
+export function Links({ actions }) {
+    const [hover, setHover] = useState(false)
+    console.log(actions)
+
+    const linkStyle = {
+        ...link,
+        backgroundColor: hover ? '#b9daa0' : '#fbe700',
+        // fontWeight: hover ? 500 : 'inherit'
+    }
+    return (
+        <div
+            onMouseOver={() => setHover(true)}
+            onMouseOut={() => setHover(false)}
+        >
+            {actions.view && <a style={linkStyle} target='_blank' href={actions.view}>View</a>}
+            {actions.code && <a style={linkStyle} target='_blank' href={actions.code}>Code</a>}
+        </div>
+    )
+}
+
 export function Card(props) {
     const [hover, setHover] = useState(false)
 
     const cardStyle = {
         ...card,
-        marginBottom: !props.lastCard && hover ? 0 : -100,
-        // marginTop: hover ? -150 : 0,
+        marginBottom: !props.lastCard && hover ? 0 : -200,
+        // marginTop: hover ? -200 : 0,
+    }
+
+    const linkStyle = {
+
     }
 
     const onCardClick = () => {
@@ -28,10 +53,9 @@ export function Card(props) {
                 <div style={cardText}>
                     <div>{props.name}</div>
                     <div style={desc}>{props.description}</div>
-                    <div style={stack}>Stack: {props.stack}</div>
                     <div style={actionContainer}>
-                        {props.actions.view && <a style={link} target='_blank' href={props.actions.view}>View</a>}
-                        {props.actions.code && <a style={link} target='_blank' href={props.actions.code}>Code</a>}
+                        <div style={stack}>Stack: {props.stack}</div>
+                        <Links actions={props.actions} />
                     </div>
                 </div>
             }
@@ -78,16 +102,14 @@ const container = {
     display: 'flex',
     flexFlow: 'column wrap',
     justifyContent: 'center',
-    marginTop: -100,
-    // transition: 'all ease .5s',
+    marginTop: -200,
 }
 
 const card = {
     display: 'flex',
     flexDirection: 'column',
-    width: 300,
+    width: 450,
     backgroundColor: 'white',
-    borderRadius: 10,
     transition: 'all ease .5s',
     boxShadow: '-1px 1px 10px .1px rgba(0, 0, 0, 0.14)'
 }
@@ -97,10 +119,8 @@ const cardText = {
 }
 
 const demoImg = {
-    width: 300,
+    width: 450,
     cursor: 'pointer',
-    borderTopLeftRadius: 10,
-    borderTopRightRadius: 10,
 }
 
 const desc = {
@@ -114,19 +134,17 @@ const stack = {
 }
 
 const actionContainer = {
-    // position: 'absolute',
-    // bottom: 0,
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     width: '100%',
-    padding: '5px 0',
-    // backgroundColor: '#fbe700',
-    // backgroundColor: '#dec191',
-    // backgroundColor: 'black',
-    // color: 'white',
-    // textAlign: 'center'
+    paddingTop: 10
 }
 
 const link = {
     textDecoration: 'none',
     color: 'inherit',
-    padding: '0 10px'
-}
+    padding: '5px 10px',
+    borderRadius: 3,
+    transition: 'all ease .1s',
+}   

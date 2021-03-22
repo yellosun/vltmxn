@@ -82,7 +82,7 @@ const blurbImg = {
 
 const portImg = {
 	width: 200,
-	borderRadius: 10,
+	// borderRadius: 10,
 	height: 'auto',
 	marginRight: 40,
 }

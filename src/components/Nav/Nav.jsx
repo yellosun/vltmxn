@@ -60,7 +60,7 @@ const logo = {
 
 const link = {
     textDecoration: 'none',
-    color: 'inherit'
+    color: 'inherit',
 }
 
 const routesContainer = {
