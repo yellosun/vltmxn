@@ -1,22 +1,18 @@
-import React, { useContext } from 'react';
-import { Context, routes } from '../Home'
-import { Link } from "react-router-dom";
+import React, { useState,   useContext } from 'react';
+import { Link, useLocation } from "react-router-dom";
+import { routes } from './constants'
 
 export function Routes() {
-    const { selectedRoute, changeRoute } = useContext(Context)
+    const { pathname } = useLocation()
+    const [selectedRoute, changeRoute] = useState(pathname)
 
-    const onClick = (route) => {
-        changeRoute(route)
-    }
-
-    return Object.values(routes).map((route) => {
-        const isSelected = route === selectedRoute
-        const linkTo = route === routes.ABOUT ? '/' : '/' + route.toLowerCase()
+    return Object.values(routes).map((page) => {
+        const isSelected = page.route === selectedRoute
         
         return (
-            <div key={route} style={routeContainer} onClick={() => onClick(route)}>
-                <Link to={linkTo} style={{...link, fontWeight: isSelected && 300}}>
-                    {route}
+            <div key={page.route} style={routeContainer} onClick={() => changeRoute(page.route)}>
+                <Link to={page.route} style={{...link, fontWeight: isSelected && 300}}>
+                    {page.label}
                 </Link>
                 {/*<div style={isSelected ? selectedCircle : unSelectedCircle}></div>*/}
             </div>  
@@ -28,7 +24,7 @@ export default function Nav() {
     return (
         <div style={container}>
             {/*<div style={logo}>
-                V.M.
+                VM
             </div>*/}
             <div style={routesContainer}>
                 <Routes/>

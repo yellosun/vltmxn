@@ -1,22 +1,13 @@
 import React, { useState } from 'react';
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, useParams } from "react-router-dom";
 import Nav from './Nav'
 import Body from './Body'
 
 export const Context = React.createContext({})
-export const routes = {
-    ABOUT: 'About',
-    PROJECTS:'Projects',
-    WORK:'Work',
-    CONTACT:'Contact',
-    RESOURCES: 'Resources'
-}
 
 export default function Home() {
-    const [selectedRoute, changeRoute] = useState(routes.ABOUT)
-
     return (
-        <Context.Provider value={{selectedRoute, changeRoute}}>
+        <Context.Provider value={null}>
             <div style={container}>
                 <div style={content}>
                     <BrowserRouter>
