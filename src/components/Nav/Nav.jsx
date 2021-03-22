@@ -86,7 +86,6 @@ const unSelectedCircle = {
     width: 10,
     marginLeft: 5,
     borderRadius: '100%',
-    // border: '1px solid black',
     border: '1px solid rgba(0,0,0,.14)',
     backgroundColor: 'rgba(0,0,0,0)'
 }

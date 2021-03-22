@@ -42,8 +42,8 @@ const container = {
 }
 
 const content = {
-    height: '600px',
-    width: '1100px',
+    height: 800,
+    width: 1100,
     display: 'flex',
     align: 'center',
     backgroundColor: 'white',

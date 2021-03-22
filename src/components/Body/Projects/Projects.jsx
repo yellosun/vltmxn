@@ -1,77 +1,106 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { projects } from './constants'
 
-export function Card({ name, description, img, stack, actions, lastCard}) {
+export function Card(props) {
     const [hover, setHover] = useState(false)
+
     const cardStyle = {
         ...card,
-        marginRight: !lastCard && hover ? 0 : -100,
-        marginTop: hover ? -20 : 0,
+        marginBottom: !props.lastCard && hover ? 0 : -100,
+        // marginTop: hover ? -150 : 0,
+    }
+
+    const onCardClick = () => {
+        return !props.lastCard && props.nextCard(props.id)
     }
 
     return (
         <div
             onMouseOver={() => setHover(true)}
             onMouseOut={() => setHover(false)}
+            onClick={onCardClick}
             style={cardStyle}
         >
-            <img src={img} style={demoImg} onClick={null}/>
-            <div style={cardText}>
-                <div>{name}</div>
-                <div style={desc}>{description}</div>
-                <div style={s}>Stack: {stack}</div>
+            <div>
+                <img src={props.img} style={demoImg} onClick={null}/>
             </div>
-            <div style={actionContainer}>
-                {actions.view && <a href={actions.view}>View</a>}
-                {actions.code && <a href={actions.code}>Code</a>}
-            </div>
+            {props.lastCard &&
+                <div style={cardText}>
+                    <div>{props.name}</div>
+                    <div style={desc}>{props.description}</div>
+                    <div style={stack}>Stack: {props.stack}</div>
+                    <div style={actionContainer}>
+                        {props.actions.view && <a style={link} target='_blank' href={props.actions.view}>View</a>}
+                        {props.actions.code && <a style={link} target='_blank' href={props.actions.code}>Code</a>}
+                    </div>
+                </div>
+            }
         </div>
     )
 }
 
 export default function Projects() {
     const projectValues = Object.values(projects)
+    const [cards, setCards] = useState(projectValues)
+
+    const nextCard = (id) => {
+        const selectedCard = projects[id]
+        let newCards
+
+        if (selectedCard) {
+            const filteredCards = cards.filter((card) => card.id !== id)
+            newCards = [...filteredCards, selectedCard]
+        } else {
+            const last = cards.pop()
+            newCards = [last, ...cards]
+        }
+
+        setCards(newCards)
+    }
 
     return (
+        <React.Fragment>
         <div style={container}>
-            {projectValues.map((card, index) => {
+            {cards.map((card, index) => {
                 const lastCard = projectValues.length - 1 === index
-                return <Card {...card} lastCard={lastCard}/>
+                const cardProps = {...card, lastCard, nextCard}
+                return <Card {...cardProps} />
             })
         }
-    </div>
+
+        </div>
+        <button onClick={nextCard}>Next Card</button>
+        </React.Fragment>
 );
 }
 
 const container = {
     display: 'flex',
-    flexFlow: 'row wrap',
+    flexFlow: 'column wrap',
     justifyContent: 'center',
+    marginTop: -100,
+    // transition: 'all ease .5s',
 }
 
 const card = {
-    width: 200,
+    display: 'flex',
+    flexDirection: 'column',
+    width: 300,
     backgroundColor: 'white',
     borderRadius: 10,
-    position: 'relative',
     transition: 'all ease .5s',
     boxShadow: '-1px 1px 10px .1px rgba(0, 0, 0, 0.14)'
 }
 
 const cardText = {
-    padding: 10
+    padding: 10,
 }
 
 const demoImg = {
-    width: 200,
+    width: 300,
     cursor: 'pointer',
-    transition: 'all ease .5s',
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
-}
-
-const expandedImg = {
-    width: 600,
 }
 
 const desc = {
@@ -79,13 +108,25 @@ const desc = {
     marginTop: 5
 }
 
-const s = {
+const stack = {
     ...desc,
     fontStyle: 'italic',
 }
 
 const actionContainer = {
-    position: 'absolute',
-    bottom: 0,
-    padding: '0 0 10px 10px'
+    // position: 'absolute',
+    // bottom: 0,
+    width: '100%',
+    padding: '5px 0',
+    // backgroundColor: '#fbe700',
+    // backgroundColor: '#dec191',
+    // backgroundColor: 'black',
+    // color: 'white',
+    // textAlign: 'center'
+}
+
+const link = {
+    textDecoration: 'none',
+    color: 'inherit',
+    padding: '0 10px'
 }
