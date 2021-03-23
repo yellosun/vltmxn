@@ -7,9 +7,9 @@ export function Links({ actions }) {
 
     const linkStyle = {
         ...link,
-        border: '1px solid black',
+        // border: '1px solid black',
         marginBottom: 5,
-        backgroundColor: hover ? 'rgba(0, 0, 0, 0.05)' : '',
+        backgroundColor: hover ? 'rgba(0, 0, 0, 0.05)' : '#e7c283',
     }
     return (
         <div
@@ -88,7 +88,7 @@ export default function Projects() {
             })
         }
         </div>
-        <button onClick={nextCard}>Next Card</button>
+        {/*<button onClick={nextCard}>Next Card</butt[on>*/}
         </React.Fragment>
 );
 }
@@ -98,6 +98,7 @@ const container = {
     flexFlow: 'column wrap',
     justifyContent: 'center',
     marginTop: -200,
+    transition: 'all ease 3s',
 }
 
 const card = {
