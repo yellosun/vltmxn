@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import { projects } from './constants'
 
 
@@ -17,8 +17,8 @@ export function Links({ actions }) {
             onMouseOver={() => setHover(true)}
             onMouseOut={() => setHover(false)}
         >
-            {actions.view && <a style={linkStyle} target='_blank' href={actions.view}>View</a>}
-            {actions.code && <a style={linkStyle} target='_blank' href={actions.code}>Code</a>}
+            {actions.view && <a style={linkStyle} target='_blank' rel='noopener noreferrer' href={actions.view}>View</a>}
+            {actions.code && <a style={linkStyle} target='_blank' rel='noopener noreferrer' href={actions.code}>Code</a>}
         </div>
     )
 }

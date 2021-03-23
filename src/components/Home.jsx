@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter, useParams } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter } from "react-router-dom";
 import Nav from './Nav'
 import Body from './Body'
 
@@ -26,7 +26,6 @@ const container = {
     justifyContent: 'center',
     height: '100vh',
 
-    // backgroundColor: 'red',  
     fontFamily: 'Lora',
     fontWeight: 700,
     fontSize: 13
