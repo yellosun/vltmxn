@@ -1,12 +1,16 @@
 import React from 'react';
 import About from './About'
 import Projects from './Projects'
+import Work from './Work'
 import { Switch, Route } from "react-router-dom";
 
 export default function Body() {
   return (
     <div style={container}>
         <Switch>
+            <Route path='/work'>
+                <Work />
+            </Route>
             <Route path='/projects'>
                 <Projects />
             </Route>

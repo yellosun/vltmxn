@@ -78,8 +78,8 @@ const routeContainer = {
 }
 
 const unSelectedCircle = {
-    height: 10,
-    width: 10,
+    height: 5,
+    width: 5,
     marginLeft: 5,
     borderRadius: '100%',
     border: '1px solid rgba(0,0,0,.14)',
