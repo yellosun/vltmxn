@@ -3,6 +3,8 @@ const crunch = require('../../../assets/crunch.jpg')
 const boba = require('../../../assets/boba.jpg')
 const awake = require('../../../assets/awake.jpg')
 const grid = require('../../../assets/grid.jpg')
+const code = require('../../../assets/code.jpg')
+const view = require('../../../assets/view.jpg')
 
 export const projects = {
     AWAKE: {
@@ -13,8 +15,11 @@ export const projects = {
         stack: 'Ruby on Rails, Node, React, Redux, JavaScript',
         actions: {
             view: null,
-            code: 'https://github.com/yellosun/awake-fe'
-        }
+            code: {
+                link: 'https://github.com/yellosun/awake-fe',
+                img: code
+            }
+        },
     },
     CRUNCH: {
         id: 'CRUNCH',
@@ -23,9 +28,12 @@ export const projects = {
         img: crunch,
         stack: ' React, Sagas, Angular1, TypeScript',
         actions: {
-            view: 'https://crunch.io/powerful-survey-analytics/',
+            view: {
+                link: 'https://crunch.io/powerful-survey-analytics/',
+                img: view
+            },
             code: null
-        }
+        },
     },
     BOBA: {
         id: 'BOBA',
@@ -34,9 +42,12 @@ export const projects = {
         img: boba,
         stack: 'Figma, Photoshop',
         actions: {
-            view: 'https://www.figma.com/proto/AMOnS6XG44jBzlYOnIlU6j/BobaMe?node-id=134%3A6&scaling=scale-down',
+            view: {
+                link: 'https://www.figma.com/proto/AMOnS6XG44jBzlYOnIlU6j/BobaMe?node-id=134%3A6&scaling=scale-down',
+                img: view
+            },
             code: null
-        }
+        },
     },
     CEQ: {
         id: 'CEQ',
@@ -45,9 +56,12 @@ export const projects = {
         img: ceq,
         stack: 'React, Redux, JavaScript',
         actions: {
-            view: 'https://www.cryptoeq.io/dashboard',
+            view: {
+                link: 'https://www.cryptoeq.io/dashboard',
+                img: view
+            },
             code: null
-        }
+        },
     },
     GRID: {
         id: 'GRID',
@@ -57,8 +71,11 @@ export const projects = {
         stack: 'React, Hooks, Context, JavaScript',
         actions: {
             view: null,
-            code: 'https://github.com/yellosun/gridesigner'
-        }
+            code: {
+                link: 'https://github.com/yellosun/gridesigner',
+                img: code
+            }
+        },
     },
 }
 

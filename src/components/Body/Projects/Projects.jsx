@@ -6,19 +6,25 @@ export function Links({ actions }) {
     const [hover, setHover] = useState(false)
 
     const linkStyle = {
-        ...link,
-        // border: '1px solid black',
-        marginBottom: 5,
-        backgroundColor: hover ? 'rgba(0, 0, 0, 0.05)' : '#e7c283',
+        ...linkContainer,
+        transform: hover ? 'scale(1.2)' : ''
     }
     return (
         <div
-            style={{marginTop: -5}}
+            style={linkStyle}
             onMouseOver={() => setHover(true)}
             onMouseOut={() => setHover(false)}
         >
-            {actions.view && <a style={linkStyle} target='_blank' rel='noopener noreferrer' href={actions.view}>View</a>}
-            {actions.code && <a style={linkStyle} target='_blank' rel='noopener noreferrer' href={actions.code}>Code</a>}
+            {actions.view && (
+                <a target='_blank' rel='noopener noreferrer' href={actions.view.link}>
+                    <img style={{height: '100%', width: 50}} src={actions.view.img}/>
+                </a>
+            )}
+            {actions.code && (
+                <a target='_blank' rel='noopener noreferrer' href={actions.code.link}>
+                    <img style={{height: '100%', width: 50}} src={actions.code.img}/>
+                </a>
+            )}
         </div>
     )
 }
@@ -137,10 +143,8 @@ const actionContainer = {
     paddingTop: 10
 }
 
-const link = {
-    textDecoration: 'none',
-    color: 'inherit',
-    padding: '5px 15px',
-    borderRadius: 3,
-    transition: 'all ease .1s',
-}   
+const linkContainer = {
+    marginTop: -5,
+    marginBottom: -10,
+    transition: 'all ease .3s',
+}
