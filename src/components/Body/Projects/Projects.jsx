@@ -17,12 +17,12 @@ export function Links({ actions }) {
         >
             {actions.view && (
                 <a target='_blank' rel='noopener noreferrer' href={actions.view.link}>
-                    <img style={{height: '100%', width: 50}} src={actions.view.img}/>
+                    <img style={{height: '100%', width: 60}} src={actions.view.img}/>
                 </a>
             )}
             {actions.code && (
                 <a target='_blank' rel='noopener noreferrer' href={actions.code.link}>
-                    <img style={{height: '100%', width: 50}} src={actions.code.img}/>
+                    <img style={{height: '100%', width: 60}} src={actions.code.img}/>
                 </a>
             )}
         </div>
@@ -56,7 +56,9 @@ export function Card(props) {
                     <div>{props.name}</div>
                     <div style={desc}>{props.description}</div>
                     <div style={actionContainer}>
-                        <div style={stack}>Stack: {props.stack}</div>
+                        <div style={stackContainer}>
+                            {props.stack.map((item) => <div style={stack}>{item}</div>)}
+                        </div>
                         <Links actions={props.actions} />
                     </div>
                 </div>
@@ -130,17 +132,28 @@ const desc = {
     marginTop: 5
 }
 
-const stack = {
-    ...desc,
-    fontStyle: 'italic',
-}
-
 const actionContainer = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '100%',
     paddingTop: 10
+}
+
+const stackContainer = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+}
+
+const stack = {
+    ...desc,
+    fontStyle: 'italic',
+    fontSize: 11,
+    backgroundColor: '#cadde2',
+    borderRadius: 10,
+    padding: '3px 7px',
+    marginRight: 5
 }
 
 const linkContainer = {
