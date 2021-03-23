@@ -4,15 +4,16 @@ import { projects } from './constants'
 
 export function Links({ actions }) {
     const [hover, setHover] = useState(false)
-    console.log(actions)
 
     const linkStyle = {
         ...link,
-        backgroundColor: hover ? '#b9daa0' : '#fbe700',
-        // fontWeight: hover ? 500 : 'inherit'
+        border: '1px solid black',
+        marginBottom: 5,
+        backgroundColor: hover ? 'rgba(0, 0, 0, 0.05)' : '',
     }
     return (
         <div
+            style={{marginTop: -5}}
             onMouseOver={() => setHover(true)}
             onMouseOut={() => setHover(false)}
         >
@@ -28,11 +29,6 @@ export function Card(props) {
     const cardStyle = {
         ...card,
         marginBottom: !props.lastCard && hover ? 0 : -200,
-        // marginTop: hover ? -200 : 0,
-    }
-
-    const linkStyle = {
-
     }
 
     const onCardClick = () => {
@@ -91,7 +87,6 @@ export default function Projects() {
                 return <Card {...cardProps} />
             })
         }
-
         </div>
         <button onClick={nextCard}>Next Card</button>
         </React.Fragment>
@@ -115,7 +110,7 @@ const card = {
 }
 
 const cardText = {
-    padding: 10,
+    padding: 15,
 }
 
 const demoImg = {
@@ -144,7 +139,7 @@ const actionContainer = {
 const link = {
     textDecoration: 'none',
     color: 'inherit',
-    padding: '5px 10px',
+    padding: '5px 15px',
     borderRadius: 3,
     transition: 'all ease .1s',
 }   
