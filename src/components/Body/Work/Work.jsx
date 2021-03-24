@@ -17,7 +17,6 @@ export function SchoolIcon() {
 }
 
 export default function Work() {
-
   return (
     <div style={container}>
     	<VerticalTimeline>
@@ -112,7 +111,6 @@ export default function Work() {
 			    	Graduated in 3 years from C.T. Bauer Business Honors College with a specialization in Digital
 			    	Marketing and certification in Global Research. Founding Ambassador of The Center for Diversity
 			    	and Inclusion while a Residential Advisor and LGBTQA+ Ally.
-
 			    </div>
 			    <div style={date}>Aug 2014 - May 2017</div>
 			    </VerticalTimelineElement>
@@ -130,26 +128,9 @@ const container = {
     width: 800
 }
 
-// #c9aee2
-// #aeb7e2
-// #6a81ec
-// #7abcbf
-// #a2d0d2
-// #bb5004
-// #89980f
-// #0f9298
-// #82bbbd
-
 const contentStyle = {
-	// border: '4px solid #e7c283',
-	backgroundColor: '#e7c283',
 	boxShadow: 'rgb(0 0 0 / 14%) -1px 1px 10px 0.1px',
-	// boxShadow: 'none'
 }
-
-// #348daf
-// #17283e
-// #91b2bf
 
 const contentArrowStyle = {
 	borderRight: '7px solid  black',
@@ -174,7 +155,6 @@ const title = {
 const subTitle = {
 	fontSize: 'inherit',
 	fontWeight: 500,
-	// color: '#e7c283'
 }
 
 const date = {

@@ -20,6 +20,15 @@ export default function Home() {
     );
 }
 
+// Color Theme
+// #d2c1d9
+// #87b3ce
+// #cadde2
+// #a6abe7
+// #baa3d8
+// #96b7d6
+
+
 const container = {
     display: 'flex',
     alignItems: 'center',

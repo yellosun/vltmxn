@@ -64,8 +64,8 @@ const btn = {
 
 const selectedBtn = {
 	...btn,
-	border: '1px solid black',
-	backgroundColor: 'black'
+	border: '1px solid #87b3ce',
+	backgroundColor: '#d2c1d9'
 }
 
 const bioContainer = {
