@@ -13,7 +13,7 @@ export function Routes() {
         
         return page.route === routes.RESOURCES.route ? (
             <div style={resourceContainer}>
-            <img style={downloadStyle} src={Download} />
+            <img style={downloadStyle} src={Download} alt={'hand-drawn icon of a flower with a download symbol center'} />
             <a download style={{...link, marginTop: 20}} href={Resource}>Resources</a>
             </div>
         ) : (
@@ -29,9 +29,7 @@ export function Routes() {
 export default function Nav() {
     return (
         <div style={container}>
-            {/*<div style={logo}>
-                VM
-            </div>*/}
+            <div style={logo}>VM</div>
             <div style={defaultFlex}>
                 <Routes/>
             </div>
@@ -60,8 +58,8 @@ const logo = {
     alignItems: 'center',
     borderRadius: '100%',
     border: '2px solid black',
-    height: 40,
-    width: 40,
+    height: 35,
+    width: 35,
     fontWeight: 700,
 }
 

@@ -5,7 +5,6 @@ import Projects from './Projects'
 import Work from './Work'
 import Contact from './Contact'
 import { routes } from '../Nav'
-const Resource = require('../../assets/resources.pdf')
 
 export default function Body() {
   return (
@@ -35,10 +34,4 @@ const container = {
     justifyContent: 'center',
     alignItems: 'center',
     overflow: 'scroll'
-}
-
-const resources = {
-    textDecoration: 'none',
-    color: 'inherit',
-    marginTop: 20
 }

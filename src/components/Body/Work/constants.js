@@ -7,8 +7,8 @@ const icon = {
 	width: '100%',
 }
 
-const SchoolIcon = <img style={icon} src={School}/>
-const WorkIcon = <img style={icon} src={Work}/>
+const SchoolIcon = <img style={icon} src={School} alt={'hand-drawn icon of graduation cap'}/>
+const WorkIcon = <img style={icon} src={Work} alt={'hand-drawn icon of laptop'}/>
 
 export const metier = {
 	BOBA: {

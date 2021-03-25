@@ -5,7 +5,6 @@ const PaperAndTape = require('../../../assets/paperandtape.png')
 
 export function Icon({ icon, link, text, color, positionTop }) {
     const [hover, setHover] = useState(false)
-    const border = `5px solid ${color}`
 
     const linkStyle = {
         ...iconStyle,
@@ -22,7 +21,7 @@ export function Icon({ icon, link, text, color, positionTop }) {
             href={link}
         >
             <div style={{...iconContainer, }}>
-                <img style={linkStyle} src={icon}/>
+                <img style={linkStyle} src={icon} alt={`hand-drawn icon of ${text}`}/>
                 <div style={textStyle}>{text}</div>
             </div>
         </a>
@@ -55,7 +54,6 @@ const container = {
     ...child,
     background: `no-repeat center url(${PaperAndTape})`,
     margin: 0
-
 }
 
 const iconContainer = {

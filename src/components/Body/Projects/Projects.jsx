@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Grow from '@material-ui/core/Grow'
 import { projects } from './constants'
+
 const Paper = require('../../../assets/paper.png')
 
 export function Links({ actions }) {
@@ -18,12 +19,20 @@ export function Links({ actions }) {
         >
             {actions.view && (
                 <a target='_blank' rel='noopener noreferrer' href={actions.view.link}>
-                    <img style={{height: '100%', width: 60}} src={actions.view.img}/>
+                    <img 
+                        style={linkAction}
+                        src={actions.view.img}
+                        alt={'hand-written `view` inside box'}
+                    />
                 </a>
             )}
             {actions.code && (
                 <a target='_blank' rel='noopener noreferrer' href={actions.code.link}>
-                    <img style={{height: '100%', width: 60}} src={actions.code.img}/>
+                    <img 
+                        style={linkAction}
+                        src={actions.code.img}
+                        alt={'hand-written `code` inside box'}
+                    />
                 </a>
             )}
         </div>
@@ -50,7 +59,11 @@ export function Card(props) {
             style={cardStyle}
         >
             <div>
-                <img src={props.img} style={demoImg} onClick={null}/>
+                <img
+                    src={props.img}
+                    style={demoImg}
+                    alt={`screenshot of ${props.name} project`}
+                />
             </div>
             {props.lastCard && (
                 <div style={cardText}>
@@ -165,4 +178,9 @@ const linkContainer = {
     marginTop: -5,
     marginBottom: -10,
     transition: 'all ease .3s',
+}
+
+const linkAction = {
+    height: '100%',
+    width: 60
 }
