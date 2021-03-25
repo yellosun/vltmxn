@@ -155,7 +155,7 @@ const stack = {
     ...desc,
     fontStyle: 'italic',
     fontSize: 11,
-    backgroundColor: '#cadde2',
+    backgroundColor: '#dcbf7c',
     borderRadius: 10,
     padding: '3px 7px',
     marginRight: 5

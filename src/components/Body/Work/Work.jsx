@@ -17,9 +17,11 @@ export function TimelineElement({ icon, position, description, backgroundColor, 
 			icon={icon}
 		>
 			<div style={title}>{position}</div>
-		    <div style={subTitle}>{place}</div>
 		    <div style={body}>{description}</div>
-		    <div style={date}>{time}</div>
+		    <div style={{display: 'flex'}}>
+			    <div style={date}>{time}</div>
+			    <div style={subTitle}>| {place}</div>
+		    </div>
 		</VerticalTimelineElement>
 	)
 }
@@ -61,7 +63,7 @@ const iconStyle = {
 
 const title = {
 	fontSize: 15,
-	margin: '-20px -20px -10px',
+	margin: '-15px -20px 0px',
 	padding: '20px 20px 10px',
 	background: `no-repeat url(${TapeJpg})`
 }
@@ -69,6 +71,7 @@ const title = {
 const subTitle = {
 	fontSize: 'inherit',
 	fontWeight: 500,
+	marginLeft: 5
 }
 
 const date = {

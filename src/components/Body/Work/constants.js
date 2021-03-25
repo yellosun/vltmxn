@@ -6,6 +6,16 @@ const icon = {
 	height: '100%',
 	width: '100%',
 }
+// #c5c3af
+// #c3ae86
+// #bbaa90
+// #ad7c31
+// #dcbf7c
+// #9e8751
+// #8c8472
+// #aad0f5
+// #add8da
+// #bde6ea
 
 const SchoolIcon = <img style={icon} src={School}/>
 const WorkIcon = <img style={icon} src={Work}/>
@@ -13,7 +23,7 @@ const WorkIcon = <img style={icon} src={Work}/>
 export const metier = {
 	BOBA: {
 		icon: SchoolIcon, 
-		backgroundColor: '#dbd1f1',
+		backgroundColor: '#92bcd0',
 		description: 'Worked in Figma to create interactive prototypes. Implemented transitions, overlays and modals with smart animate and learned how to export assets for engineering and collaboration best practices within Figma.',
 		position: 'Mobile UI/UX',
 		place: 'Udemy',
@@ -21,7 +31,7 @@ export const metier = {
 	},
 	CRUNCH: {
 		icon: WorkIcon, 
-		backgroundColor: '#aae8e6',
+		backgroundColor: '#ce9742',
 		description: 'Redesigned data layer, implemented TypeScript, migrated Angular1 code to React, and introduced new data visualization features across the app while maintaining unit and functional tests.',
 		position: 'Frontend Developer',
 		place: 'Crunch.io',
@@ -29,7 +39,7 @@ export const metier = {
 	},
 	BLOCK: {
 		icon: WorkIcon, 
-		backgroundColor: '#c2e3f3',
+		backgroundColor: '#dcbf7c',
 		description: "Developed client's fullstack web apps including a real-time crypto sentiment analysis platform and an oral hygiene mobile, tablet, and desktop sales funnel.",
 		position: 'Web Developer',
 		place: 'Block Party',
@@ -37,7 +47,7 @@ export const metier = {
 	},
 	FLATIRON: {
 		icon: SchoolIcon, 
-		backgroundColor: '#bfc4ff',
+		backgroundColor: '#c2e3f3',
 		description: 'Completed 700+ hours studying the software development cycle. Presented on computing algorithms, wrote 6 technical blogs, and built 5 projects (3 fullstack, 1 frontend, 1 backend) in 4 months.',
 		position: 'Software Engineering' ,
 		place: 'Flatiron School',
@@ -45,7 +55,7 @@ export const metier = {
 	},
 	TIGER: {
 		icon: WorkIcon, 
-		backgroundColor: '#e8d6ff',
+		backgroundColor: '#c3ae86',
 		description: 'Worked 1-on-1 with first-time entrepreneurs to develop cohesive, humanist-centered digital marketing strategies. Designed web templates, email and ad campaigns, and branding portfolios.',
 		position: 'Creative Startup Consultant',
 		place: 'Tiger Space Digital',
@@ -53,7 +63,7 @@ export const metier = {
 	},
 	UH: {
 		icon: SchoolIcon, 
-		backgroundColor: '#a6cbef',
+		backgroundColor: '#add8da',
 		description: 'Graduated in 3 years from C.T. Bauer Business Honors College with a specialization in Digital Marketing and certification in Global Research. Founding Ambassador of The Center for Diversity and Inclusion while a Residential Advisor and LGBTQA+ Ally.',
 		position: 'Marketing',
 		place: 'University of Houston',
