@@ -22,11 +22,16 @@ export default function Home() {
 
 // Color Theme
 // #d2c1d9
+// #dbd1f1
 // #87b3ce
+// #aae8e6
 // #cadde2
+// #c2e3f3
 // #a6abe7
+// #bfc4ff
 // #baa3d8
-// #96b7d6
+// #e8d6ff
+// #a6cbef
 
 
 const container = {

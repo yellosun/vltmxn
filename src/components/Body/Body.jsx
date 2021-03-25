@@ -12,7 +12,7 @@ export default function Body() {
     <div style={container}>
         <Switch>
             <Route path={routes.RESOURCES.route}>
-                <a download href={Resources} style={resources}>Resources</a>
+                <a download href={{/*Resources*/}} style={resources}>Resources</a>
             </Route>
             <Route path={routes.CONTACT.route}>
                 <Contact />

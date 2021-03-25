@@ -5,15 +5,16 @@ import {
 }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import './Work.css'
-const school = require('../../../assets/school.jpg')
-const work = require('../../../assets/computer.jpg')
+const School = require('../../../assets/school.jpg')
+const Work = require('../../../assets/computer.jpg')
+const Tape = require('../../../assets/tape.jpg')
 
 export function WorkIcon() {
-	return <img style={icon} src={work}/>
+	return <img style={icon} src={Work}/>
 }
 
 export function SchoolIcon() {
-	return <img style={icon} src={school}/>
+	return <img style={icon} src={School}/>
 }
 
 export default function Work() {
@@ -21,7 +22,7 @@ export default function Work() {
     <div style={container}>
     	<VerticalTimeline>
     		<VerticalTimelineElement
-    			contentStyle={{...contentStyle, backgroundColor: '#d2c1d9'}}
+    			contentStyle={{...contentStyle, backgroundColor: '#dbd1f1'}}
 			    contentArrowStyle={contentArrowStyle}
     			iconStyle={iconStyle}
     			icon={<SchoolIcon/>}
@@ -37,7 +38,7 @@ export default function Work() {
     		</VerticalTimelineElement>
 
     		<VerticalTimelineElement
-    			contentStyle={{...contentStyle, backgroundColor: '#87b3ce'}}
+    			contentStyle={{...contentStyle, backgroundColor: '#aae8e6'}}
 			    contentArrowStyle={contentArrowStyle}
     			iconStyle={iconStyle}
     			icon={<WorkIcon/>}
@@ -46,13 +47,13 @@ export default function Work() {
 			    <div style={subTitle}>Crunch.io</div>
 			    <div style={body}>
 			    	Redesigned data layer, implemented TypeScript, migrated Angular1 code to React,
-				    and introduced new data visualization features across the app.
+				    and introduced new data visualization features across the app while maintaining unit and functional tests.
 			    </div>
 			    <div style={date}>Mar 2019 - Nov 2020</div>
     		</VerticalTimelineElement>
 
     		<VerticalTimelineElement
-    			contentStyle={{...contentStyle, backgroundColor: '#cadde2'}}
+    			contentStyle={{...contentStyle, backgroundColor: '#c2e3f3'}}
 			    contentArrowStyle={contentArrowStyle}
     			iconStyle={iconStyle}
     			icon={<WorkIcon/>}
@@ -60,14 +61,14 @@ export default function Work() {
 				<div style={title}>Web Developer</div>
 			    <div style={subTitle}>Block Party</div>
 			    <div style={body}>
-			    	Developed client's fullstack web apps including real-time crypto sentiment analysis
-			    	platform in a month and oral hygiene mobile, tablet, and desktop sales funnel in a week.
+			    	Developed client's fullstack web apps including a real-time crypto sentiment analysis
+			    	platform and an oral hygiene mobile, tablet, and desktop sales funnel.
 			    </div>
 			    <div style={date}>Jan 2018 - Aug 2019</div>
     		</VerticalTimelineElement>
 
     		<VerticalTimelineElement
-    			contentStyle={{...contentStyle, backgroundColor: '#a6abe7'}}
+    			contentStyle={{...contentStyle, backgroundColor: '#bfc4ff'}}
 			    contentArrowStyle={contentArrowStyle}
     			iconStyle={iconStyle}
     			icon={<SchoolIcon/>}
@@ -84,7 +85,7 @@ export default function Work() {
 			    </VerticalTimelineElement>
 
     		<VerticalTimelineElement
-    			contentStyle={{...contentStyle, backgroundColor: '#baa3d8'}}
+    			contentStyle={{...contentStyle, backgroundColor: '#e8d6ff'}}
 			    contentArrowStyle={contentArrowStyle}
     			iconStyle={iconStyle}
     			icon={<WorkIcon/>}
@@ -100,7 +101,7 @@ export default function Work() {
 			    </VerticalTimelineElement>
 
 			    <VerticalTimelineElement
-    			contentStyle={{...contentStyle, backgroundColor: '#96b7d6'}}
+    			contentStyle={{...contentStyle, backgroundColor: '#a6cbef'}}
 			    contentArrowStyle={contentArrowStyle}
     			iconStyle={iconStyle}
     			icon={<SchoolIcon/>}
@@ -134,8 +135,7 @@ const contentStyle = {
 
 const contentArrowStyle = {
 	borderRight: '7px solid  black',
-	marginLeft: 2,
-	marginRight: 1
+	margin: '0 2px',
 }
 
 
@@ -166,5 +166,5 @@ const body = {
 	fontWeight: 500,
 	margin: '10px 0',
 	fontStyle: 'italic',
-	color: 'rgba(0, 0, 0, 0.50)'
+	color: 'rgba(0, 0, 0, 0.80)'
 }

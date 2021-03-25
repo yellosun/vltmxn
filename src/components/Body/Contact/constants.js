@@ -11,18 +11,6 @@ export const icons = {
         text: 'she/her',
         color: '#cadde2',
     },
-    LINKEDIN: {
-        icon: linkedin,
-        link: 'https://www.linkedin.com/in/violetmoon/',
-        text: 'linkedin',
-        color: '#a6abe7',
-    },
-    GITHUB: {
-        icon: github,
-        link: 'https://github.com/yellosun',
-        text: 'github',
-        color: '#baa3d8',
-    },
     LOCATION: {
         icon: location,
         link: null,
@@ -34,5 +22,17 @@ export const icons = {
         link: 'mailto:vltmxn@gmail.com',
         text: 'email',
         color: '#87b3ce',
-    }
+    },
+    GITHUB: {
+        icon: github,
+        link: 'https://github.com/yellosun',
+        text: 'github',
+        color: '#baa3d8',
+    },
+    LINKEDIN: {
+        icon: linkedin,
+        link: 'https://www.linkedin.com/in/violetmoon/',
+        text: 'linkedin',
+        color: '#a6abe7',
+    },
 }

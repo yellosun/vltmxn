@@ -22,7 +22,7 @@ export function Icon({ icon, link, text, color, positionTop }) {
             rel='noopener noreferrer'
             href={link}
         >
-            <div style={{...iconContainer, borderTop: border, borderBottom: border}}>
+            <div style={{...iconContainer, }}>
                 <img style={linkStyle} src={icon}/>
                 <div style={textStyle}>{text}</div>
             </div>
