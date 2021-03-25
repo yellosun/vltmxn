@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Slide from '@material-ui/core/Slide'
+import Fade from '@material-ui/core/Fade'
 import { icons } from './constants'
 const PaperAndTape = require('../../../assets/paperandtape.png')
 
@@ -34,13 +34,13 @@ export default function Contact() {
   return (
 
     <div style={container}>
-        <Slide in={true}>
+        <Fade in={true} {...({ timeout: 700 })}>
             <div style={child}>
             {Object.values(icons).map((icon) => {
                 return <Icon {...icon} />
             })}
             </div>
-        </Slide>
+        </Fade>
     </div>
   );
 }

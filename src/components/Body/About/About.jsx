@@ -1,51 +1,20 @@
 import React, { useState } from 'react';
 import Fade from '@material-ui/core/Fade'
-import Switch from '@material-ui/core/Switch';
-import { withStyles } from '@material-ui/core/styles';
+import Switch from './Switch'
 
 const Bio = require('../../../assets/bio.jpg')
 const Portrait = require('../../../assets/violet.png')
-
-export const AntSwitch = withStyles((theme) => ({
-  root: {
-    width: 28,
-    height: 16,
-    padding: 0,
-    display: 'flex',
-  },
-  switchBase: {
-    padding: 2,
-    color: '#c3ae86',
-    '&$checked': {
-      transform: 'translateX(12px)',
-      color: '#92bcd0',
-      '& + $track': {
-        opacity: 1,
-        backgroundColor: '#c2e3f3',
-        borderColor: '#c2e3f3',
-      },
-    },
-  },
-  thumb: {
-    width: 12,
-    height: 12,
-    boxShadow: 'none',
-  },
-  track: {
-    borderRadius: 16 / 2,
-    opacity: 1,
-    backgroundColor: '#c2e3f3',
-  },
-  checked: {},
-}))(Switch);
-
-
 
 export default function About() {
 	const [isText, setTextView] = useState(false)
 
 	const onClickText = () => setTextView(true)
 	const onClickImg = () => setTextView(false)
+
+	const switchProps = {
+		checked: isText,
+		onChange: () => setTextView(!isText)
+	}
 
 	return (
 		<Fade in={true} {...({ timeout: 700 })}>
@@ -69,9 +38,8 @@ export default function About() {
 				}
 				<div style={btnGroup}>
 					<div style={btn} onClick={onClickImg}>pen</div>
-					<AntSwitch checked={isText} onChange={() => setTextView(!isText)} name="checkedC" />
+					<Switch {...switchProps}/>
 					<div style={btn} onClick={onClickText}>keys</div>
-					
 				</div>
 			</div>
 		</div>
