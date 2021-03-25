@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import Fade from '@material-ui/core/Fade'
 const Bio = require('../../../assets/bio.jpg')
-const Portrait = require('../../../assets/violet_col.jpg')
+const Portrait = require('../../../assets/violet.png')
 
 export default function About() {
 	const [isText, setTextView] = useState(false)
@@ -9,6 +10,7 @@ export default function About() {
 	const onClickImg = () => setTextView(false)
 
 	return (
+		<Fade in={true} {...({ timeout: 700 })}>
 		<div style={container}>
 			<img src={Portrait} style={portImg}/>
 			<div style={bioContainer}>
@@ -36,6 +38,7 @@ export default function About() {
 				</div>
 			</div>
 		</div>
+		</Fade>
 	);
 }
 
@@ -81,7 +84,7 @@ const blurbImg = {
 }
 
 const portImg = {
-	width: 200,
+	width: 400,
 	// borderRadius: 10,
 	height: 'auto',
 	marginRight: 40,

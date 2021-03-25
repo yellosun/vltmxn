@@ -14,7 +14,6 @@ export function Routes() {
                 <Link to={page.route} style={{...link, fontWeight: isSelected && 300}}>
                     {page.label}
                 </Link>
-                {/*<div style={isSelected ? selectedCircle : unSelectedCircle}></div>*/}
             </div>  
         )
     })

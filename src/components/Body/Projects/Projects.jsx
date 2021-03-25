@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import Grow from '@material-ui/core/Grow'
 import { projects } from './constants'
-
+const Paper = require('../../../assets/paper.png')
 
 export function Links({ actions }) {
     const [hover, setHover] = useState(false)
@@ -51,7 +52,7 @@ export function Card(props) {
             <div>
                 <img src={props.img} style={demoImg} onClick={null}/>
             </div>
-            {props.lastCard &&
+            {props.lastCard && (
                 <div style={cardText}>
                     <div>{props.name}</div>
                     <div style={desc}>{props.description}</div>
@@ -62,7 +63,7 @@ export function Card(props) {
                         <Links actions={props.actions} />
                     </div>
                 </div>
-            }
+            )}
         </div>
     )
 }
@@ -87,26 +88,30 @@ export default function Projects() {
     }
 
     return (
-        <React.Fragment>
         <div style={container}>
-            {cards.map((card, index) => {
-                const lastCard = projectValues.length - 1 === index
-                const cardProps = {...card, lastCard, nextCard}
-                return <Card {...cardProps} />
-            })
-        }
+        <Grow in={true} {...({ timeout: 700 })}>
+            <div>
+                {cards.map((card, index) => {
+                    const lastCard = projectValues.length - 1 === index
+                    const cardProps = {...card, lastCard, nextCard}
+                    return <Card {...cardProps} />
+                })}
+            </div>
+        </Grow>
         </div>
-        {/*<button onClick={nextCard}>Next Card</butt[on>*/}
-        </React.Fragment>
-);
+    );
 }
 
 const container = {
     display: 'flex',
     flexFlow: 'column wrap',
     justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
+    width: '100%',
     marginTop: -200,
     transition: 'all ease 3s',
+    background: `center / contain no-repeat url(${Paper})`
 }
 
 const card = {

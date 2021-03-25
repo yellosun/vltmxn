@@ -38,12 +38,12 @@ export default function Contact() {
 }
 
 const container = {
-    height: '100%',
+    height: 800,
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    // width: 300,
+
 }
 const iconContainer = {
     display: 'flex',
@@ -53,7 +53,6 @@ const iconContainer = {
     borderRadius: '10%',
     height: 80,
     width: 80,
-    // borderBottom: '5px solid black'
 }
 
 const textStyle = {
