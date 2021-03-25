@@ -5,13 +5,14 @@ import Projects from './Projects'
 import Work from './Work'
 import Contact from './Contact'
 import { routes } from '../Nav'
+const Resources = require('../../assets/resources.pdf')
 
 export default function Body() {
   return (
     <div style={container}>
         <Switch>
             <Route path={routes.RESOURCES.route}>
-                
+                <a download href={Resources} style={resources}>Resources</a>
             </Route>
             <Route path={routes.CONTACT.route}>
                 <Contact />
@@ -37,4 +38,10 @@ const container = {
     justifyContent: 'center',
     alignItems: 'center',
     overflow: 'scroll'
+}
+
+const resources = {
+    textDecoration: 'none',
+    color: 'inherit',
+    marginTop: 20
 }

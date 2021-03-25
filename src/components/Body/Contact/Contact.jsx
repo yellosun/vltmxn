@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import Slide from '@material-ui/core/Slide'
 import { icons } from './constants'
+const Tape = require('../../../assets/tape.jpg')
 
 export function Icon({ icon, link, text, color, positionTop }) {
     const [hover, setHover] = useState(false)
@@ -11,6 +13,7 @@ export function Icon({ icon, link, text, color, positionTop }) {
     }
 
     return (
+        
         <a
             onMouseOver={() => setHover(true)}
             onMouseOut={() => setHover(false)}
@@ -29,22 +32,29 @@ export function Icon({ icon, link, text, color, positionTop }) {
 
 export default function Contact() {
   return (
+
     <div style={container}>
-        {Object.values(icons).map((icon) => {
-            return <Icon {...icon} />
-        })}
+        <Slide in={true}>
+            <div style={container}>
+            {Object.values(icons).map((icon) => {
+                return <Icon {...icon} />
+            })}
+            </div>
+        </Slide>
+        {/*<img src={Tape} />*/}
     </div>
   );
 }
 
 const container = {
-    height: 800,
+    height: '100%',
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
 
 }
+
 const iconContainer = {
     display: 'flex',
     flexDirection: 'column',

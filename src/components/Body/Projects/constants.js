@@ -7,20 +7,6 @@ const code = require('../../../assets/code.jpg')
 const view = require('../../../assets/view.jpg')
 
 export const projects = {
-    AWAKE: {
-        id: 'AWAKE',
-        name: 'Awake',
-        description: 'Built daily log entry and meditation timer with visually aggregated data, and mindfulness-based quotes API.',
-        img: awake,
-        stack: ['Ruby on Rails', 'Node', 'React', 'Redux', 'JavaScript'],
-        actions: {
-            view: null,
-            code: {
-                link: 'https://github.com/yellosun/awake-fe',
-                img: code
-            }
-        },
-    },
     CRUNCH: {
         id: 'CRUNCH',
         name: 'Crunch.io',
@@ -34,6 +20,20 @@ export const projects = {
             },
             code: null
         },
+    },
+    GRID: {
+        id: 'GRID',
+        name: 'Grid Designer',
+        description: 'Built customizable and adjustable grid to design and download block patterns with a palette selector.',
+        img: grid,
+        stack: ['React', 'Hooks', 'Context', 'JavaScript'],
+        actions: {
+            view: null,
+            code: {
+                link: 'https://github.com/yellosun/gridesigner',
+                img: code
+            }
+        }
     },
     BOBA: {
         id: 'BOBA',
@@ -63,16 +63,16 @@ export const projects = {
             code: null
         },
     },
-    GRID: {
-        id: 'GRID',
-        name: 'Grid Designer',
-        description: 'Built customizable and adjustable grid to design and download block patterns with a palette selector.',
-        img: grid,
-        stack: ['React', 'Hooks', 'Context', 'JavaScript'],
+      AWAKE: {
+        id: 'AWAKE',
+        name: 'Awake',
+        description: 'Built daily log entry and meditation timer with visually aggregated data, and mindfulness-based quotes API.',
+        img: awake,
+        stack: ['Ruby on Rails', 'Node', 'React', 'Redux', 'JavaScript'],
         actions: {
             view: null,
             code: {
-                link: 'https://github.com/yellosun/gridesigner',
+                link: 'https://github.com/yellosun/awake-fe',
                 img: code
             }
         },

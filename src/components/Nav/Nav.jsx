@@ -28,6 +28,7 @@ export default function Nav() {
             <div style={routesContainer}>
                 <Routes/>
             </div>
+            
         </div>
     );
 }
@@ -74,19 +75,4 @@ const routeContainer = {
     width: '100%',
     marginTop: 20,
     cursor: 'pointer',
-}
-
-const unSelectedCircle = {
-    height: 5,
-    width: 5,
-    marginLeft: 5,
-    borderRadius: '100%',
-    border: '1px solid rgba(0,0,0,.14)',
-    backgroundColor: 'rgba(0,0,0,0)'
-}
-
-const selectedCircle = {
-    ...unSelectedCircle,
-    border: '1px solid rgba(0,0,0,.14)',
-    backgroundColor: 'black',
 }
