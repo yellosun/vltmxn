@@ -6,16 +6,6 @@ const icon = {
 	height: '100%',
 	width: '100%',
 }
-// #c5c3af
-// #c3ae86
-// #bbaa90
-// #ad7c31
-// #dcbf7c
-// #9e8751
-// #8c8472
-// #aad0f5
-// #add8da
-// #bde6ea
 
 const SchoolIcon = <img style={icon} src={School}/>
 const WorkIcon = <img style={icon} src={Work}/>

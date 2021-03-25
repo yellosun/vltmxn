@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Slide from '@material-ui/core/Slide'
 import { icons } from './constants'
-const Tape = require('../../../assets/tape.jpg')
+const PaperAndTape = require('../../../assets/paperandtape.png')
 
 export function Icon({ icon, link, text, color, positionTop }) {
     const [hover, setHover] = useState(false)
@@ -35,23 +35,29 @@ export default function Contact() {
 
     <div style={container}>
         <Slide in={true}>
-            <div style={container}>
+            <div style={child}>
             {Object.values(icons).map((icon) => {
                 return <Icon {...icon} />
             })}
             </div>
         </Slide>
-        {/*<img src={Tape} />*/}
     </div>
   );
 }
 
-const container = {
+
+const child = {
     height: '100%',
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: -40
+}
+const container = {
+    ...child,
+    background: `no-repeat center url(${PaperAndTape})`,
+    margin: 0
 
 }
 

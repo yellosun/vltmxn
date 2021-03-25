@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import { routes } from './constants'
+const Resource = require('../../assets/resources.pdf')
 
 export function Routes() {
     const { pathname } = useLocation()
@@ -9,7 +10,9 @@ export function Routes() {
     return Object.values(routes).map((page) => {
         const isSelected = page.route === selectedRoute
         
-        return (
+        return page.route === routes.RESOURCES.route ? (
+            <a download style={{...link, marginTop: 20 }} href={Resource}>Resources</a>
+        ) : (
             <div key={page.route} style={routeContainer} onClick={() => changeRoute(page.route)}>
                 <Link to={page.route} style={{...link, fontWeight: isSelected && 300}}>
                     {page.label}

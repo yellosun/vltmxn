@@ -1,7 +1,45 @@
 import React, { useState } from 'react';
 import Fade from '@material-ui/core/Fade'
+import Switch from '@material-ui/core/Switch';
+import { withStyles } from '@material-ui/core/styles';
+
 const Bio = require('../../../assets/bio.jpg')
 const Portrait = require('../../../assets/violet.png')
+
+export const AntSwitch = withStyles((theme) => ({
+  root: {
+    width: 28,
+    height: 16,
+    padding: 0,
+    display: 'flex',
+  },
+  switchBase: {
+    padding: 2,
+    color: '#c3ae86',
+    '&$checked': {
+      transform: 'translateX(12px)',
+      color: '#92bcd0',
+      '& + $track': {
+        opacity: 1,
+        backgroundColor: '#c2e3f3',
+        borderColor: '#c2e3f3',
+      },
+    },
+  },
+  thumb: {
+    width: 12,
+    height: 12,
+    boxShadow: 'none',
+  },
+  track: {
+    borderRadius: 16 / 2,
+    opacity: 1,
+    backgroundColor: '#c2e3f3',
+  },
+  checked: {},
+}))(Switch);
+
+
 
 export default function About() {
 	const [isText, setTextView] = useState(false)
@@ -30,10 +68,9 @@ export default function About() {
 					<img src={Bio} style={blurbImg}/>
 				}
 				<div style={btnGroup}>
-					<div style={isText ? btn : selectedBtn} onClick={onClickImg} />
-					<div style={isText ? selectedBtn : btn} onClick={onClickText} />
-					{/*<div style={{marginRight: 5, textDecoration: !isText && 'underline'}} onClick={onClickImg}>written</div>
-					<div style={{textDecoration: isText && 'underline'}} onClick={onClickText}>typed</div>*/}
+					<div style={btn} onClick={onClickImg}>pen</div>
+					<AntSwitch checked={isText} onChange={() => setTextView(!isText)} name="checkedC" />
+					<div style={btn} onClick={onClickText}>keys</div>
 					
 				</div>
 			</div>
@@ -48,21 +85,14 @@ const container = {
 }
 
 const btnGroup = {
-	display: 'flex',
-	alignItems: 'center',
+	...container,
 	marginTop: 20,
 	fontSize: 10,
-	fontStyle: 'italic',
 	cursor: 'pointer',
 }
 
 const btn = {
-	height: 10,
-	width: 10,
-	marginRight: 5,
-	borderRadius: '100%',
-	cursor: 'pointer',
-	border: '1px solid rgba(0,0,0,.14)',
+	margin: 5
 }
 
 const selectedBtn = {
@@ -75,7 +105,7 @@ const bioContainer = {
 	display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    height: 250
+    height: 280
 }
 
 const blurbImg = {
