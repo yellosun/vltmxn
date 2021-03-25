@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import { routes } from './constants'
 const Resource = require('../../assets/resources.pdf')
+const Download = require('../../assets/flower-dwnld.jpg')
 
 export function Routes() {
     const { pathname } = useLocation()
@@ -11,7 +12,10 @@ export function Routes() {
         const isSelected = page.route === selectedRoute
         
         return page.route === routes.RESOURCES.route ? (
-            <a download style={{...link, marginTop: 20 }} href={Resource}>Resources</a>
+            <div style={resourceContainer}>
+            <img style={downloadStyle} src={Download} />
+            <a download style={{...link, marginTop: 20}} href={Resource}>Resources</a>
+            </div>
         ) : (
             <div key={page.route} style={routeContainer} onClick={() => changeRoute(page.route)}>
                 <Link to={page.route} style={{...link, fontWeight: isSelected && 300}}>
@@ -28,7 +32,7 @@ export default function Nav() {
             {/*<div style={logo}>
                 VM
             </div>*/}
-            <div style={routesContainer}>
+            <div style={defaultFlex}>
                 <Routes/>
             </div>
             
@@ -66,15 +70,21 @@ const link = {
     color: 'inherit',
 }
 
-const routesContainer = {
-    ...defaultFlex,
+const downloadStyle = {
+    height: 80,
+    marginBottom: -55,
+    marginRight: 5
+}
+
+const resourceContainer = {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
 }
 
 const routeContainer = {
-    display: 'flex',
-    flexDirection: 'row',
+    ...resourceContainer,
     justifyContent: 'flex-end',
-    alignItems: 'center',
     width: '100%',
     marginTop: 20,
     cursor: 'pointer',

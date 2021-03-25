@@ -13,7 +13,6 @@ export function Icon({ icon, link, text, color, positionTop }) {
     }
 
     return (
-        
         <a
             onMouseOver={() => setHover(true)}
             onMouseOut={() => setHover(false)}
@@ -32,7 +31,6 @@ export function Icon({ icon, link, text, color, positionTop }) {
 
 export default function Contact() {
   return (
-
     <div style={container}>
         <Fade in={true} {...({ timeout: 700 })}>
             <div style={child}>
@@ -44,7 +42,6 @@ export default function Contact() {
     </div>
   );
 }
-
 
 const child = {
     height: '100%',

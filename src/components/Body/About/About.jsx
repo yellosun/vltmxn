@@ -63,12 +63,6 @@ const btn = {
 	margin: 5
 }
 
-const selectedBtn = {
-	...btn,
-	border: '1px solid #87b3ce',
-	backgroundColor: '#d2c1d9'
-}
-
 const bioContainer = {
 	display: 'flex',
     flexDirection: 'column',
@@ -83,7 +77,6 @@ const blurbImg = {
 
 const portImg = {
 	width: 400,
-	// borderRadius: 10,
 	height: 'auto',
 	marginRight: 40,
 }
