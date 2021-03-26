@@ -14,7 +14,7 @@ export function Routes() {
         return page.route === routes.RESOURCES.route ? (
             <div style={resourceContainer}>
             <img style={downloadStyle} src={Download} alt={'hand-drawn icon of a flower with a download symbol center'} />
-            <a download style={{...link, marginTop: 20}} href={Resource}>Resources</a>
+            <a target='_blank' rel='noopener noreferrer' style={{...link, marginTop: 20}} href={Resource}>Resources</a>
             </div>
         ) : (
             <div key={page.route} style={routeContainer} onClick={() => changeRoute(page.route)}>

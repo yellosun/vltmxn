@@ -2,20 +2,21 @@ const ceq = require('../../../assets/ceq.jpg')
 const crunch = require('../../../assets/crunch.jpg')
 const boba = require('../../../assets/boba.jpg')
 const awake = require('../../../assets/awake.jpg')
+const rr = require('../../../assets/recoveryroots.jpg')
 const grid = require('../../../assets/grid.jpg')
 const code = require('../../../assets/code.jpg')
 const view = require('../../../assets/view.jpg')
 
 export const projects = {
-    CRUNCH: {
-        id: 'CRUNCH',
-        name: 'Crunch.io',
-        description: 'Architected admin permissions and permissions editing modal series, and built dataset importer panels.',
-        img: crunch,
-        stack: ['React', 'Sagas', 'Angular1', 'TypeScript'],
+      CEQ: {
+        id: 'CEQ',
+        name: 'CryptoEQ',
+        description: 'Built crypto sentiment analysis desktop and mobile frontend, admin management platform, and telegram bot.',
+        img: ceq,
+        stack: ['React', 'Redux', 'JavaScript'],
         actions: {
             view: {
-                link: 'https://crunch.io/powerful-survey-analytics/',
+                link: 'https://www.cryptoeq.io/dashboard',
                 img: view
             },
             code: null
@@ -35,6 +36,34 @@ export const projects = {
             }
         }
     },
+    AWAKE: {
+        id: 'AWAKE',
+        name: 'Awake',
+        description: 'Built daily log entry and meditation timer with visually aggregated data, and mindfulness-based quotes API.',
+        img: awake,
+        stack: ['Ruby on Rails', 'Node', 'React', 'Redux', 'JavaScript'],
+        actions: {
+            view: null,
+            code: {
+                link: 'https://github.com/yellosun/awake-fe',
+                img: code
+            }
+        },
+    },
+    CRUNCH: {
+        id: 'CRUNCH',
+        name: 'Crunch.io',
+        description: 'Architected admin permissions and permissions editing modal series, and built dataset importer panels.',
+        img: crunch,
+        stack: ['React', 'Sagas', 'Angular1', 'TypeScript'],
+        actions: {
+            view: {
+                link: 'https://crunch.io/powerful-survey-analytics/',
+                img: view
+            },
+            code: null
+        },
+    },
     BOBA: {
         id: 'BOBA',
         name: 'BobaMe',
@@ -49,30 +78,16 @@ export const projects = {
             code: null
         },
     },
-    CEQ: {
-        id: 'CEQ',
-        name: 'CryptoEQ',
-        description: 'Built crypto sentiment analysis desktop and mobile frontend, admin management platform, and telegram bot.',
-        img: ceq,
-        stack: ['React', 'Redux', 'JavaScript'],
-        actions: {
-            view: {
-                link: 'https://www.cryptoeq.io/dashboard',
-                img: view
-            },
-            code: null
-        },
-    },
-      AWAKE: {
-        id: 'AWAKE',
-        name: 'Awake',
+    RR: {
+        id: 'RR',
+        name: 'Recovery Roots',
         description: 'Built daily log entry and meditation timer with visually aggregated data, and mindfulness-based quotes API.',
-        img: awake,
-        stack: ['Ruby on Rails', 'Node', 'React', 'Redux', 'JavaScript'],
+        img: rr,
+        stack: ['Node', 'React', 'Redux', 'TypeScript'],
         actions: {
             view: null,
             code: {
-                link: 'https://github.com/yellosun/awake-fe',
+                link: 'https://github.com/yellosun/recoveryroots',
                 img: code
             }
         },
