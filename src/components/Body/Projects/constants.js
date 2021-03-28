@@ -81,7 +81,7 @@ export const projects = {
     RR: {
         id: 'RR',
         name: 'Recovery Roots',
-        description: 'Built daily log entry and meditation timer with visually aggregated data, and mindfulness-based quotes API.',
+        description: 'Built ebook download and email sign up, admin blog management system with Markdown blog entry, and instagram profile parser.',
         img: rr,
         stack: ['Node', 'React', 'Redux', 'TypeScript'],
         actions: {

@@ -44,7 +44,7 @@ export function Card(props) {
 
     const cardStyle = {
         ...card,
-        marginBottom: !props.lastCard && hover ? 0 : -200,
+        marginBottom: !props.lastCard && hover ? -50 : -200,
     }
 
     const onCardClick = () => {
