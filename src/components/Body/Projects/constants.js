@@ -85,7 +85,10 @@ export const projects = {
         img: rr,
         stack: ['Node', 'React', 'Redux', 'TypeScript'],
         actions: {
-            view: null,
+            view: {
+                link: 'https://pensive-murdock-7cfb25.netlify.app',
+                img: view
+            },
             code: {
                 link: 'https://github.com/yellosun/recoveryroots',
                 img: code

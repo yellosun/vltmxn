@@ -5,22 +5,29 @@ import { projects } from './constants'
 const Paper = require('../../../assets/paper.png')
 
 export function Links({ actions }) {
-    const [hover, setHover] = useState(false)
+    const [viewHover, setViewHover] = useState(false)
+    const [codeHover, setCodeHover] = useState(false)
 
-    const linkStyle = {
-        ...linkContainer,
-        transform: hover ? 'scale(1.2)' : ''
+    const viewLinkStyle = {
+        ...linkAction,
+        transform: viewHover ? 'scale(1.2)' : ''
     }
+
+    const codeLinkStyle = {
+        ...linkAction,
+        transform: codeHover ? 'scale(1.2)' : ''
+    }
+
     return (
         <div
-            style={linkStyle}
-            onMouseOver={() => setHover(true)}
-            onMouseOut={() => setHover(false)}
+            style={linkContainer}
         >
             {actions.view && (
                 <a target='_blank' rel='noopener noreferrer' href={actions.view.link}>
                     <img 
-                        style={linkAction}
+                        style={viewLinkStyle}
+                        onMouseOver={() => setViewHover(true)}
+                        onMouseOut={() => setViewHover(false)}
                         src={actions.view.img}
                         alt={'hand-written `view` inside box'}
                     />
@@ -29,7 +36,9 @@ export function Links({ actions }) {
             {actions.code && (
                 <a target='_blank' rel='noopener noreferrer' href={actions.code.link}>
                     <img 
-                        style={linkAction}
+                        style={codeLinkStyle}
+                        onMouseOver={() => setCodeHover(true)}
+                        onMouseOut={() => setCodeHover(false)}
                         src={actions.code.img}
                         alt={'hand-written `code` inside box'}
                     />
@@ -175,12 +184,13 @@ const stack = {
 }
 
 const linkContainer = {
-    marginTop: -5,
+    // marginTop: -5,
     marginBottom: -10,
     transition: 'all ease .3s',
 }
 
 const linkAction = {
     height: '100%',
-    width: 60
+    width: 60,
+    marginLeft: 5
 }
