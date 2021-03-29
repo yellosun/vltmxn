@@ -2,10 +2,10 @@ const ceq = require('../../../assets/ceq.jpg')
 const crunch = require('../../../assets/crunch.jpg')
 const boba = require('../../../assets/boba.jpg')
 const awake = require('../../../assets/awake.jpg')
-const rr = require('../../../assets/recoveryroots.jpg')
-const grid = require('../../../assets/grid.jpg')
-const code = require('../../../assets/code.jpg')
-const view = require('../../../assets/view.jpg')
+const rr = require('../../../assets/recoveryroots.svg')
+const grid = require('../../../assets/grid.svg')
+const code = require('../../../assets/code.svg')
+const view = require('../../../assets/view.svg')
 
 export const projects = {
       CEQ: {

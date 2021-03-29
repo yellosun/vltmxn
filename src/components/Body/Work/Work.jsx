@@ -6,6 +6,7 @@ import {
 import { metier } from './constants'
 import 'react-vertical-timeline-component/style.min.css';
 import './Work.css'
+
 const TapeJpg = require('../../../assets/tape.jpg')
 
 export function TimelineElement({ icon, position, description, backgroundColor, place, time }) {

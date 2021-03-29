@@ -1,8 +1,8 @@
-const linkedin = require('../../../assets/linkedin.jpg')
-const github = require('../../../assets/github.jpg')
-const location = require('../../../assets/location.jpg')
-const email = require('../../../assets/email.jpg')
-const person = require('../../../assets/person.jpg')
+const linkedin = require('../../../assets/linkedin.svg')
+const github = require('../../../assets/github.svg')
+const location = require('../../../assets/location.svg')
+const email = require('../../../assets/email.svg')
+const person = require('../../../assets/person.svg')
 
 export const icons = {
     PERSON: {

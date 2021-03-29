@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Grow from '@material-ui/core/Grow'
 import { projects } from './constants'
 
-const Paper = require('../../../assets/paper.png')
+const Paper = require('../../../assets/paper.jpg')
 
 export function Links({ actions }) {
     const [viewHover, setViewHover] = useState(false)

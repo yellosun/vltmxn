@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Fade from '@material-ui/core/Fade'
 import { icons } from './constants'
-const PaperAndTape = require('../../../assets/paperandtape.png')
+
+const PaperAndTape = require('../../../assets/paperandtape.jpg')
 
 export function Icon({ icon, link, text, color, positionTop }) {
     const [hover, setHover] = useState(false)

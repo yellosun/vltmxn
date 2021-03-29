@@ -1,6 +1,6 @@
 import React from 'react';
-const School = require('../../../assets/school.jpg')
-const Work = require('../../../assets/computer.jpg')
+const School = require('../../../assets/school.svg')
+const Work = require('../../../assets/computer.svg')
 
 const icon = {
 	height: '100%',

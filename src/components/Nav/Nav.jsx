@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import { routes } from './constants'
 const Resource = require('../../assets/resources.pdf')
-const Download = require('../../assets/flower-dwnld.jpg')
+const Download = require('../../assets/flower-dwnld.svg')
 
 export function Routes() {
     const { pathname } = useLocation()

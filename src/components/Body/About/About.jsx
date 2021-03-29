@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Fade from '@material-ui/core/Fade'
 import Switch from './Switch'
 
-const Bio = require('../../../assets/bio.jpg')
-const Portrait = require('../../../assets/violet.png')
+const Bio = require('../../../assets/bio.svg')
+const Portrait = require('../../../assets/violet.jpg')
 
 export default function About() {
 	const [isText, setTextView] = useState(false)
