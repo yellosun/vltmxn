@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import { routes } from './constants'
-const Resource = require('../../assets/resources.pdf')
+// const Resource = require('../../assets/resources.pdf')
 const Download = require('../../assets/flower-dwnld.svg')
+const pdfLink = 'https://docs.google.com/document/d/1Iu2SLiKovbFQt-AFa05vLF7RN3kDUfsb6ubOOGzGa0M/edit?usp=sharing'
 
 export function Routes() {
     const { pathname } = useLocation()
@@ -14,7 +15,13 @@ export function Routes() {
         return page.route === routes.RESOURCES.route ? (
             <div style={resourceContainer}>
             <img style={downloadStyle} src={Download} alt={'hand-drawn icon of a flower with a download symbol center'} />
-            <a target='_blank' rel='noopener noreferrer' style={{...link, marginTop: 20}} href={Resource}>Resources</a>
+            <a
+                target='_blank'
+                rel='noopener noreferrer'
+                style={{...link, marginTop: 20}}
+                href={pdfLink}>
+                Resources
+            </a>
             </div>
         ) : (
             <div key={page.route} style={routeContainer} onClick={() => changeRoute(page.route)}>
