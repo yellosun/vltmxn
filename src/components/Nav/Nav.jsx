@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
 import { routes } from './constants'
-// const Resource = require('../../assets/resources.pdf')
+
 const Download = require('../../assets/flower-dwnld.svg')
 const pdfLink = 'https://docs.google.com/document/d/1Iu2SLiKovbFQt-AFa05vLF7RN3kDUfsb6ubOOGzGa0M/edit?usp=sharing'
 
-export function Routes() {
-    const { pathname } = useLocation()
-    const [selectedRoute, changeRoute] = useState(pathname)
-
+export function Routes({ selectedRoute, changeRoute }) {
     return Object.values(routes).map((page) => {
         const isSelected = page.route === selectedRoute
         
@@ -34,13 +31,17 @@ export function Routes() {
 }
 
 export default function Nav() {
+    const { pathname } = useLocation()
+    const [selectedRoute, changeRoute] = useState(pathname)
+    const routesProps = { selectedRoute, changeRoute }
+
     return (
         <div style={container}>
-            <Link to={routes.ABOUT.route} style={link}>
+            <Link to={routes.ABOUT.route} style={link} onClick={() => changeRoute(routes.ABOUT.route)}>
                 <div style={logo}>VM</div>
             </Link>
             <div style={defaultFlex}>
-                <Routes/>
+                <Routes {...routesProps} />
             </div>
             
         </div>
