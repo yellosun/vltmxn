@@ -24,7 +24,8 @@ export function Links({ actions }) {
         >
             {actions.view && (
                 <a target='_blank' rel='noopener noreferrer' href={actions.view.link}>
-                    <img 
+                    <img
+                        rel='preload'
                         style={viewLinkStyle}
                         onMouseOver={() => setViewHover(true)}
                         onMouseOut={() => setViewHover(false)}
@@ -35,7 +36,8 @@ export function Links({ actions }) {
             )}
             {actions.code && (
                 <a target='_blank' rel='noopener noreferrer' href={actions.code.link}>
-                    <img 
+                    <img
+                        rel='preload'
                         style={codeLinkStyle}
                         onMouseOver={() => setCodeHover(true)}
                         onMouseOut={() => setCodeHover(false)}

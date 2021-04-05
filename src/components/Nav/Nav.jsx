@@ -14,7 +14,7 @@ export function Routes() {
         
         return page.route === routes.RESOURCES.route ? (
             <div style={resourceContainer}>
-            <img style={downloadStyle} src={Download} alt={'hand-drawn icon of a flower with a download symbol center'} />
+            <img rel='preload' style={downloadStyle} src={Download} alt={'hand-drawn icon of a flower with a download symbol center'} />
             <a
                 target='_blank'
                 rel='noopener noreferrer'

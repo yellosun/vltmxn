@@ -19,7 +19,7 @@ export default function About() {
 	return (
 		<Fade in={true} {...({ timeout: 700 })}>
 		<div style={container}>
-			<img src={Portrait} style={portImg} alt={'portrait of violet moon in front of a blue sky and yellow mountains'}/>
+			<img rel='preload' src={Portrait} style={portImg} alt={'portrait of violet moon in front of a blue sky and yellow mountains'}/>
 			<div style={bioContainer}>
 				{isText ? 
 					<div style={textBlurb}>
@@ -34,7 +34,7 @@ export default function About() {
 						</div>
 					</div>
 				:
-					<img src={Bio} style={blurbImg} alt={'hand-written paragraph about violet moon'}/>
+					<img rel='preload' src={Bio} style={blurbImg} alt={'hand-written paragraph about violet moon'}/>
 				}
 				<div style={btnGroup}>
 					<div style={btn} onClick={onClickImg}>pen</div>

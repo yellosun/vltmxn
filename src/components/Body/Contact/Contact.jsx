@@ -22,7 +22,7 @@ export function Icon({ icon, link, text, color, positionTop }) {
             href={link}
         >
             <div style={{...iconContainer, }}>
-                <img style={linkStyle} src={icon} alt={`hand-drawn icon of ${text}`}/>
+                <img rel='preload' style={linkStyle} src={icon} alt={`hand-drawn icon of ${text}`}/>
                 <div style={textStyle}>{text}</div>
             </div>
         </a>
