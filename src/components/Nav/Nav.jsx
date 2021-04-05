@@ -36,7 +36,9 @@ export function Routes() {
 export default function Nav() {
     return (
         <div style={container}>
-            <div style={logo}>VM</div>
+            <Link to={routes.ABOUT.route} style={link}>
+                <div style={logo}>VM</div>
+            </Link>
             <div style={defaultFlex}>
                 <Routes/>
             </div>
