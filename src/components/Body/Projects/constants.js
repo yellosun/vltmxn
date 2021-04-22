@@ -72,7 +72,7 @@ export const projects = {
         stack: ['Figma', 'Photoshop'],
         actions: {
             view: {
-                link: 'https://www.figma.com/proto/AMOnS6XG44jBzlYOnIlU6j/BobaMe?node-id=134%3A6&scaling=scale-down',
+                link: 'https://www.figma.com/proto/AMOnS6XG44jBzlYOnIlU6j/BobaMe?scaling=scale-down&page-id=0%3A1&node-id=134%3A6',
                 img: view
             },
             code: null
