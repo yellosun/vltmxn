@@ -47,7 +47,7 @@ export const metier = {
 		icon: WorkIcon, 
 		backgroundColor: '#c3ae86',
 		description: 'Worked 1-on-1 with first-time entrepreneurs to develop cohesive, humanist-centered digital marketing strategies. Designed web templates, email and ad campaigns, and branding portfolios.',
-		position: 'Creative Startup Consultant',
+		position: 'Creative Consultant',
 		place: 'Tiger Space Digital',
 		time: 'May 2016 - Aug 2018',
 	},
@@ -55,7 +55,7 @@ export const metier = {
 		icon: SchoolIcon, 
 		backgroundColor: '#add8da',
 		description: 'Graduated in 3 years from C.T. Bauer Business Honors College with a specialization in Digital Marketing and certification in Global Research. Founding Ambassador of The Center for Diversity and Inclusion while a Residential Advisor and LGBTQA+ Ally.',
-		position: 'Marketing',
+		position: 'Honors Marketing',
 		place: 'University of Houston',
 		time: 'Aug 2014 - May 2017',
 	}
