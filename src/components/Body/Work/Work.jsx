@@ -60,6 +60,7 @@ const contentArrowStyle = {
 
 const iconStyle = {
 	boxShadow: 'none',
+	backgroundColor: 'white',
 }
 
 const title = {
